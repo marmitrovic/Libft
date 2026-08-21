@@ -3,47 +3,47 @@
 
 void *ft_memmove(void *dest, const void *src, size_t len){
 
-    unsigned char * ptrd;
-    unsigned char *ptrs;
-    size_t i;
+	unsigned char * ptrd;
+	unsigned char *ptrs;
+	size_t i;
 
-    ptrd = (unsigned char *)dest;
-    ptrs = (unsigned char *)src;
+	ptrd = (unsigned char *)dest;
+	ptrs = (unsigned char *)src;
 
-    if( dest == NULL || src == NULL){
-        return (0);
-    }
+	if( dest == NULL || src == NULL){
+	    return (0);
+	}
 
-    i = 0;
-    if (dest < src)
-    {
-        while (i < len)
-        {
-            ptrd[i] = ptrs[i];
-            i++;
-        }
-    }
-    else {
-            while (len > 0)
-        {
-            len--;
-            ptrd[len] = ptrs[len];
-        }
-    }
-    return(dest);
+	i = 0;
+	if (dest < src)
+	{
+	    while (i < len)
+	    {
+	        ptrd[i] = ptrs[i];
+	        i++;
+	    }
+	}
+	else {
+	        while (len > 0)
+	    {
+	        len--;
+	        ptrd[len] = ptrs[len];
+	    }
+	}
+	return(dest);
 }
 
 /*
 
 int main(){
-    char name[] = "marko mitrovic";
+	char name[] = "marko mitrovic";
 
-    char newname[25];
+	char newname[25];
 
-    printf("Now name is here: %s\n", (char *)name);
+	printf("Now name is here: %s\n", (char *)name);
 
-    ft_memmove(newname, name, 5);
+	ft_memmove(newname, name, 5);
 
-    printf("After memcpy name is here: %s\n", (char *)newname);
+	printf("After memcpy name is here: %s\n", (char *)newname);
 }
-    */
+	*/

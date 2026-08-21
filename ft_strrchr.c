@@ -2,31 +2,31 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-    char* last;
-    char letter;
-    int i;
+	char* last;
+	char letter;
+	int i;
 
-    letter = (char)c;
-    last = NULL;
-    i = 0;
+	letter = (char)c;
+	last = NULL;
+	i = 0;
 
-    while(s[i] != '\0')
-    {
-        i++;
-        if (s[i] == letter){
-            last = (char *)&s[i];
-        }
-    }
-    if(s[i] == letter){
-        last = (char *)&s[i];
-    }
-    return(last);
+	while(s[i] != '\0')
+	{
+	    i++;
+	    if (s[i] == letter){
+	        last = (char *)&s[i];
+	    }
+	}
+	if(s[i] == letter){
+	    last = (char *)&s[i];
+	}
+	return(last);
 }
 
 /*
 int main(){
-    char s[] = "Markokvic";
-    printf("this is string %s after function %s\n", s, ft_strrchr(s, 'k'));
+	char s[] = "Markokvic";
+	printf("this is string %s after function %s\n", s, ft_strrchr(s, 'k'));
 
 }
 */

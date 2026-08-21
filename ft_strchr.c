@@ -2,25 +2,25 @@
 
 char *ft_strchr(const char *s, int c)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while(s[i] != '\0')
-    {
-        if(s[i] == c)
-            return ((char *)&s[i]);
+	i = 0;
+	while(s[i] != '\0')
+	{
+	    if(s[i] == c)
+	        return ((char *)&s[i]);
 
-        i++;
-    }
-    if (s[i] == (char)c)
-        return ((char *)&s[i]);
+	    i++;
+	}
+	if (s[i] == (char)c)
+	    return ((char *)&s[i]);
 
-    return (NULL);
+	return (NULL);
 }
 /* 
 int main(){
-    char c[] = "Markovic";
-    printf("this is string %s after function %s\n", c, ft_strchr(c, 'k'));
+	char c[] = "Markovic";
+	printf("this is string %s after function %s\n", c, ft_strchr(c, 'k'));
 
 }
 

@@ -5,33 +5,33 @@
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    unsigned int i;
+	unsigned int i;
 
-    if (s == NULL || f == NULL)
-        return;
+	if (s == NULL || f == NULL)
+	    return;
 
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+	    f(i, &s[i]);
+	    i++;
+	}
 }
 
 
 /*
 diference between strmapi and striteri is basically this: 
 if (s == NULL || f == NULL)
-        return (NULL);
-        this is void function so it need just RETURN  empty no values
+	    return (NULL);
+	    this is void function so it need just RETURN  empty no values
 
-    also additional function is void, and argument in that function has a pointer char* (here)
-    so that is why in my test func i am using *c
-    no need for malloc, because I am changing the original string
+	also additional function is void, and argument in that function has a pointer char* (here)
+	so that is why in my test func i am using *c
+	no need for malloc, because I am changing the original string
 
-    always cheching are pointers pointing an empty space in memory or no! 
-    (s == NULL || f == NULL) -> just for pointers, ONLY they can point in empty space!
+	always cheching are pointers pointing an empty space in memory or no! 
+	(s == NULL || f == NULL) -> just for pointers, ONLY they can point in empty space!
 
 */
 void	my_test_func(unsigned int i, char *c)
@@ -45,9 +45,9 @@ void	my_test_func(unsigned int i, char *c)
 int	main(void)
 {
 	//char	*text = "hello world"; // this text is just for reading needs [] to be able to change it
-    char	text[] = "hello world";
+	char	text[] = "hello world";
 	
-    printf("Before: %s\n", text);
+	printf("Before: %s\n", text);
 
 	ft_striteri(text, my_test_func);
 
@@ -56,4 +56,4 @@ int	main(void)
 
 	return (0);
 }
-    */
+	*/

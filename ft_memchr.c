@@ -4,40 +4,40 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    size_t i;
-    const unsigned char *ptr;
-    unsigned char uc;
+	size_t i;
+	const unsigned char *ptr;
+	unsigned char uc;
 
-    ptr = (const unsigned char *)s;
-    uc = (unsigned char)c;
-    i = 0;
-    while ( i < n)
-    {
-        if (uc == ptr[i]){
-            return ((void *)&ptr[i]);
-        }
-        i++;
-    }
-    return (NULL);
+	ptr = (const unsigned char *)s;
+	uc = (unsigned char)c;
+	i = 0;
+	while ( i < n)
+	{
+	    if (uc == ptr[i]){
+	        return ((void *)&ptr[i]);
+	    }
+	    i++;
+	}
+	return (NULL);
 }
 
 /*
 
 int main(){
-    char s1[] = "Markovic";
+	char s1[] = "Markovic";
 
-    printf("This function compares n bytes of %s\n after function %p\n", s1, ft_memchr(s1, 'k', 5));
-    int i;
-    i = 0;
-    while (s1[i] != '\0')
-    {
-        printf("Adress: %p, Letter %c\n", (void *)&s1[i], s1[i]);
-        i++;
-    }
-    printf("Adress: %p, letter : \\0 (kraj stringa)\n", (void *)&s1[i]);
-    return (0);
+	printf("This function compares n bytes of %s\n after function %p\n", s1, ft_memchr(s1, 'k', 5));
+	int i;
+	i = 0;
+	while (s1[i] != '\0')
+	{
+	    printf("Adress: %p, Letter %c\n", (void *)&s1[i], s1[i]);
+	    i++;
+	}
+	printf("Adress: %p, letter : \\0 (kraj stringa)\n", (void *)&s1[i]);
+	return (0);
 }
-    */
+	*/
 
 /*
 it is almost identical like strchr but it doesnt stop on \0

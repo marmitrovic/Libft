@@ -2,5 +2,5 @@
 #include <stdio.h>
 
 int main() {
-    printf("%i", ft_strlen("Hello World"));
+	printf("%i", ft_strlen("Hello World"));
 }

@@ -9,12 +9,12 @@
 
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    if (lst == NULL || del == NULL)
-        return;
+	if (lst == NULL || del == NULL)
+	    return;
 
-    del(lst->content);
+	del(lst->content);
 
-    free(lst); 
+	free(lst); 
 }
 
 // This is a delete one, the delete function, as an argument in ft_lestdelone function. 
@@ -30,30 +30,30 @@ void ft_lstdelone(t_list *lst, void (*del)(void*))
 /*
 void obrisi_sadrzaj(void *content)
 {
-    printf("1. Funkcija 'del' oslobađa sadržaj: %s\n", (char *)content);
-    free(content);
+	printf("1. Funkcija 'del' oslobađa sadržaj: %s\n", (char *)content);
+	free(content);
 }
 
 int main(void)
 {
-    // 1. Alociramo memoriju za vagon (node)
-    t_list *vagon = malloc(sizeof(t_list));
-    if (!vagon)
-        return (1);
+	// 1. Alociramo memoriju za vagon (node)
+	t_list *vagon = malloc(sizeof(t_list));
+	if (!vagon)
+	    return (1);
 
-    // 2. Alociramo memoriju za sadržaj unutar vagona (npr. string)
-    vagon->content = strdup("Poruka unutar vagona");
-    vagon->next = NULL;
+	// 2. Alociramo memoriju za sadržaj unutar vagona (npr. string)
+	vagon->content = strdup("Poruka unutar vagona");
+	vagon->next = NULL;
 
-    printf("Stvoren vagon sa sadržajem: %s\n", (char *)vagon->content);
+	printf("Stvoren vagon sa sadržajem: %s\n", (char *)vagon->content);
 
-    // 3. Pozivamo tvoju funkciju ft_lstdelone!
-    // Kao prvi argument šaljemo vagon koji želimo obrisati.
-    // Kao drugi argument šaljemo NAŠU funkciju 'obrisi_sadrzaj' (ili prosto 'free').
-    ft_lstdelone(vagon, obrisi_sadrzaj);
+	// 3. Pozivamo tvoju funkciju ft_lstdelone!
+	// Kao prvi argument šaljemo vagon koji želimo obrisati.
+	// Kao drugi argument šaljemo NAŠU funkciju 'obrisi_sadrzaj' (ili prosto 'free').
+	ft_lstdelone(vagon, obrisi_sadrzaj);
 
-    printf("2. Vagon je uspešno obrisan iz memorije!\n");
+	printf("2. Vagon je uspešno obrisan iz memorije!\n");
 
-    return (0);
+	return (0);
 }
-    */
+	*/
