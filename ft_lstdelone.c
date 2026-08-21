@@ -1,23 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/21 19:06:22 by marko             #+#    #+#             */
+/*   Updated: 2026/08/21 19:08:23 by marko            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-*/
 #include "libft.h"
 
-
-
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst == NULL || del == NULL)
-	    return;
-
+		return ;
 	del(lst->content);
-
-	free(lst); 
+	free(lst);
 }
 
-// This is a delete one, the delete function, as an argument in ft_lestdelone function. 
+/* 
+// This is a delete one, the delete function, 
+	//as an argument in ft_lestdelone function. 
 // I call del function and give argument to delete. 
 // and then I delete/ free that empty/ deleted vagon. 
 
@@ -25,7 +30,8 @@ void ft_lstdelone(t_list *lst, void (*del)(void*))
 
 
 // Pomoćna funkcija koju ćemo proslediti kao 'del' argument.
-// Njena uloga je samo da pozove free na sadržaj i ispiše poruku da vidimo da radi.
+// Njena uloga je samo da pozove free 
+	// na sadržaj i ispiše poruku da vidimo da radi.
 
 /*
 void obrisi_sadrzaj(void *content)
@@ -49,7 +55,8 @@ int main(void)
 
 	// 3. Pozivamo tvoju funkciju ft_lstdelone!
 	// Kao prvi argument šaljemo vagon koji želimo obrisati.
-	// Kao drugi argument šaljemo NAŠU funkciju 'obrisi_sadrzaj' (ili prosto 'free').
+	// Kao drugi argument šaljemo NAŠU funkciju 
+		//'obrisi_sadrzaj' (ili prosto 'free').
 	ft_lstdelone(vagon, obrisi_sadrzaj);
 
 	printf("2. Vagon je uspešno obrisan iz memorije!\n");
