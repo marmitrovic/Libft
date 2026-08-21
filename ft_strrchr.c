@@ -14,7 +14,7 @@ char *ft_strrchr(const char *s, int c)
 	{
 		i++;
 		if (s[i] == letter){
-		    last = (char *)&s[i];
+			last = (char *)&s[i];
 		}
 	}
 	if(s[i] == letter){

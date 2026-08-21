@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/21 19:48:39 by marko             #+#    #+#             */
+/*   Updated: 2026/08/21 19:49:38 by marko            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int counter;
+	int	counter;
 
-	counter = 0; 
+	counter = 0;
 	while (lst)
-		{
-			counter++;
-			lst = lst-> next;
-		}
+	{
+		counter++;
+		lst = lst-> next;
+	}
 	return (counter);
 }
 
@@ -18,7 +30,8 @@ if (!lst)
 {
 return (counter);
 }
-I dont need this, becuase if list is empty while will return counter that is actually 0;
+I dont need this, becuase if list is empty 
+while will return counter that is actually 0;
 */
 
 /*

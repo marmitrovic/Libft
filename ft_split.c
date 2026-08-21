@@ -13,11 +13,11 @@ static int  count_words(char const *s, char c)
 	{
 		if (*s != c && in_word == 0)
 		{
-		    in_word = 1;
-		    count++;
+			in_word = 1;
+			count++;
 		}
 		else if (*s == c)
-		    in_word = 0;
+			in_word = 0;
 		s++;
 	}
 	return(count);
@@ -39,18 +39,18 @@ char **ft_split(char const *s, char c)
 	i = 0;
 	while (s[0] != '\0')
 	{
-		    while(s[0] != '\0' && s[0] == c)
-		        s++;
-		    if(s[0] != '\0')
-		    {
-		        len = 0;
-		        while (s[len] != '\0' && s[len] != c)
-		            len++;
-		        tab[i] = ft_substr(s, 0, len);
-		        i++;
+			while(s[0] != '\0' && s[0] == c)
+			s++;
+			if(s[0] != '\0')
+			{
+			len = 0;
+			while (s[len] != '\0' && s[len] != c)
+			len++;
+			tab[i] = ft_substr(s, 0, len);
+			i++;
 
-		        s = s + len;
-		    }
+			s = s + len;
+			}
 	}
 	tab[i] = NULL;
 	return (tab);
