@@ -1,14 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/21 20:03:47 by marko             #+#    #+#             */
+/*   Updated: 2026/08/21 20:05:19 by marko            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-
-static int  count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-	int count;
-	int in_word;
+	int	count;
+	int	in_word;
 
 	count = 0;
 	in_word = 0;
-
 	while(*s)
 	{
 		if (*s != c && in_word == 0)
@@ -20,29 +30,28 @@ static int  count_words(char const *s, char c)
 			in_word = 0;
 		s++;
 	}
-	return(count);
+	return (count);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 
-	char **tab;
-	int i;
-	int len;
+	char	**tab;
+	int	i;
+	int	len;
 
 	if (s == NULL)
 		return (NULL);
-
 	tab = malloc((count_words(s, c) + 1) *sizeof(char *));
 	if(tab == NULL)
 		return(NULL);
 	i = 0;
 	while (s[0] != '\0')
 	{
-			while(s[0] != '\0' && s[0] == c)
+		while(s[0] != '\0' && s[0] == c)
 			s++;
-			if(s[0] != '\0')
-			{
+		if(s[0] != '\0')
+		{
 			len = 0;
 			while (s[len] != '\0' && s[len] != c)
 			len++;
@@ -50,12 +59,12 @@ char **ft_split(char const *s, char c)
 			i++;
 
 			s = s + len;
-			}
+		}
 	}
 	tab[i] = NULL;
 	return (tab);
-
 }
+
 /*
 int main()
 {
