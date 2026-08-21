@@ -6,7 +6,7 @@
 /*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 20:15:15 by marko             #+#    #+#             */
-/*   Updated: 2026/08/21 20:15:50 by marko            ###   ########.fr       */
+/*   Updated: 2026/08/21 20:39:51 by marko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 
 	if (destsize == 0)
 		return ((size_t)ft_strlen(src));
-
 	i = 0;
-	while (src[i] != '\0' && i < (destsize - 1 ))
+	while (src[i] != '\0' && i < (destsize - 1))
 	{
 		dest[i] = src[i];
 		i++;
