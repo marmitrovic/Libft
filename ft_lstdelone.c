@@ -6,7 +6,7 @@
 /*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 19:06:22 by marko             #+#    #+#             */
-/*   Updated: 2026/08/21 19:31:32 by marko            ###   ########.fr       */
+/*   Updated: 2026/08/21 22:14:43 by marko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 // Njena uloga je samo da pozove free 
 	// na sadržaj i ispiše poruku da vidimo da radi.
 
-/*
+
 void obrisi_sadrzaj(void *content)
 {
 	printf("1. Funkcija 'del' oslobađa sadržaj: %s\n", (char *)content);
