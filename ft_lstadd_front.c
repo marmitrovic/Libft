@@ -1,15 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/21 18:54:20 by marko             #+#    #+#             */
+/*   Updated: 2026/08/21 18:55:04 by marko            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;
-
 	new->next = *lst;
-
 	*lst = new;
 }
-
 
 /* 
 I am not changing who is first in line - 
@@ -19,8 +28,6 @@ with second line, I am changing that pointer, to points to new (FIRST in line)
 So just switching pointers 
 
 */
-
-
 /*
 
 int	main(void)

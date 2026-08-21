@@ -1,20 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/21 18:52:27 by marko             #+#    #+#             */
+/*   Updated: 2026/08/21 18:54:02 by marko            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *last_node;
-    if (!lst || !new)
-        return;
-    if (!*lst)
-    {
-            *lst = new;
-            return;
-    }
+	t_list	*last_node;
 
-    last_node = ft_lstlast(*lst);
-
-    last_node->next = new;
-
+	if (!lst || !new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	last_node = ft_lstlast(*lst);
+	last_node->next = new;
 }
 
 /*
@@ -37,7 +47,8 @@ int	main(void)
 	node1 = ft_lstnew("Prvi");
 	node2 = ft_lstnew("Drugi");
 
-	// 2. Dodajemo prvi čvor na kraj (pošto je lista bila prazna, on postaje i početak)
+	// 2. Dodajemo prvi čvor na kraj 
+	(pošto je lista bila prazna, on postaje i početak)
 	ft_lstadd_back(&head, node1);
 
 	// 3. Dodajemo drugi čvor na kraj
