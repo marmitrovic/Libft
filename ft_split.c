@@ -11,14 +11,14 @@ static int  count_words(char const *s, char c)
 
 	while(*s)
 	{
-	    if (*s != c && in_word == 0)
-	    {
-	        in_word = 1;
-	        count++;
-	    }
-	    else if (*s == c)
-	        in_word = 0;
-	    s++;
+		if (*s != c && in_word == 0)
+		{
+		    in_word = 1;
+		    count++;
+		}
+		else if (*s == c)
+		    in_word = 0;
+		s++;
 	}
 	return(count);
 }
@@ -31,26 +31,26 @@ char **ft_split(char const *s, char c)
 	int len;
 
 	if (s == NULL)
-	    return (NULL);
+		return (NULL);
 
 	tab = malloc((count_words(s, c) + 1) *sizeof(char *));
 	if(tab == NULL)
-	    return(NULL);
+		return(NULL);
 	i = 0;
 	while (s[0] != '\0')
 	{
-	        while(s[0] != '\0' && s[0] == c)
-	            s++;
-	        if(s[0] != '\0')
-	        {
-	            len = 0;
-	            while (s[len] != '\0' && s[len] != c)
-	                len++;
-	            tab[i] = ft_substr(s, 0, len);
-	            i++;
+		    while(s[0] != '\0' && s[0] == c)
+		        s++;
+		    if(s[0] != '\0')
+		    {
+		        len = 0;
+		        while (s[len] != '\0' && s[len] != c)
+		            len++;
+		        tab[i] = ft_substr(s, 0, len);
+		        i++;
 
-	            s = s + len;
-	        }
+		        s = s + len;
+		    }
 	}
 	tab[i] = NULL;
 	return (tab);
@@ -67,20 +67,20 @@ int main()
 	result = ft_split(s, c);
 
 	if (result == NULL)
-	    return (1);
+		return (1);
 
 	i = 0; 
 	while (result[i] != NULL)
 	{ 
-	    printf("Word on index %d: %s \n", i, result[i]);
-	    i++;
+		printf("Word on index %d: %s \n", i, result[i]);
+		i++;
 	}
 
 	i = 0;
 	while (result[i] != NULL)
 	{
-	    free(result[i]);
-	    i++;
+		free(result[i]);
+		i++;
 	}
 	free(result);
 	

@@ -12,13 +12,13 @@ char *ft_strrchr(const char *s, int c)
 
 	while(s[i] != '\0')
 	{
-	    i++;
-	    if (s[i] == letter){
-	        last = (char *)&s[i];
-	    }
+		i++;
+		if (s[i] == letter){
+		    last = (char *)&s[i];
+		}
 	}
 	if(s[i] == letter){
-	    last = (char *)&s[i];
+		last = (char *)&s[i];
 	}
 	return(last);
 }

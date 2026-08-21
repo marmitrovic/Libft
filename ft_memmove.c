@@ -11,24 +11,24 @@ void *ft_memmove(void *dest, const void *src, size_t len){
 	ptrs = (unsigned char *)src;
 
 	if( dest == NULL || src == NULL){
-	    return (0);
+		return (0);
 	}
 
 	i = 0;
 	if (dest < src)
 	{
-	    while (i < len)
-	    {
-	        ptrd[i] = ptrs[i];
-	        i++;
-	    }
+		while (i < len)
+		{
+		    ptrd[i] = ptrs[i];
+		    i++;
+		}
 	}
 	else {
-	        while (len > 0)
-	    {
-	        len--;
-	        ptrd[len] = ptrs[len];
-	    }
+		    while (len > 0)
+		{
+		    len--;
+		    ptrd[len] = ptrs[len];
+		}
 	}
 	return(dest);
 }

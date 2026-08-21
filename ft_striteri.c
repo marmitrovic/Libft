@@ -8,14 +8,14 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int i;
 
 	if (s == NULL || f == NULL)
-	    return;
+		return;
 
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-	    f(i, &s[i]);
-	    i++;
+		f(i, &s[i]);
+		i++;
 	}
 }
 
@@ -23,8 +23,8 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 /*
 diference between strmapi and striteri is basically this: 
 if (s == NULL || f == NULL)
-	    return (NULL);
-	    this is void function so it need just RETURN  empty no values
+		return (NULL);
+		this is void function so it need just RETURN  empty no values
 
 	also additional function is void, and argument in that function has a pointer char* (here)
 	so that is why in my test func i am using *c

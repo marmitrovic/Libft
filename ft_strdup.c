@@ -7,7 +7,7 @@ int ft_strlen(const char *c)
 	
 	i = 0;
 	while (c[i] != '\0')
-	    i++;
+		i++;
 	return (i);
 }
 
@@ -22,13 +22,13 @@ char *ft_strdup(const char *s)
 	copy = malloc((len + 1) * sizeof(char));
 
 	if (copy == NULL)
-	    return (NULL);
+		return (NULL);
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-	    copy[i] = s[i];
-	    i++;
+		copy[i] = s[i];
+		i++;
 	}
 	copy[i] = '\0';
 	return (copy);

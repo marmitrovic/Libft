@@ -6,7 +6,7 @@
 /*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 19:06:22 by marko             #+#    #+#             */
-/*   Updated: 2026/08/21 19:08:23 by marko            ###   ########.fr       */
+/*   Updated: 2026/08/21 19:31:32 by marko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(void)
 	// 1. Alociramo memoriju za vagon (node)
 	t_list *vagon = malloc(sizeof(t_list));
 	if (!vagon)
-	    return (1);
+		return (1);
 
 	// 2. Alociramo memoriju za sadržaj unutar vagona (npr. string)
 	vagon->content = strdup("Poruka unutar vagona");

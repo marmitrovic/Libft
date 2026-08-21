@@ -13,10 +13,10 @@ void *ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while ( i < n)
 	{
-	    if (uc == ptr[i]){
-	        return ((void *)&ptr[i]);
-	    }
-	    i++;
+		if (uc == ptr[i]){
+		    return ((void *)&ptr[i]);
+		}
+		i++;
 	}
 	return (NULL);
 }
@@ -31,8 +31,8 @@ int main(){
 	i = 0;
 	while (s1[i] != '\0')
 	{
-	    printf("Adress: %p, Letter %c\n", (void *)&s1[i], s1[i]);
-	    i++;
+		printf("Adress: %p, Letter %c\n", (void *)&s1[i], s1[i]);
+		i++;
 	}
 	printf("Adress: %p, letter : \\0 (kraj stringa)\n", (void *)&s1[i]);
 	return (0);

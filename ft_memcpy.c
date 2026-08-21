@@ -10,13 +10,13 @@ void *ft_memcpy(void *dest, const void *src, size_t n){
 	ptrs = (unsigned char *)src;
 
 	if (dest == NULL || src == NULL)
-	    return (NULL);
+		return (NULL);
 
 	i = 0;
 	while (i < n)
 	{
-	    ptrd[i] = ptrs[i];
-	    i++;
+		ptrd[i] = ptrs[i];
+		i++;
 	}
 
 

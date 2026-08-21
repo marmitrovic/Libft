@@ -12,8 +12,8 @@ void *ft_memset(void *b, int c, size_t len){
 
 	while (i < len){
 
-	    ptr[i] = (unsigned char) c;
-	    i++;
+		ptr[i] = (unsigned char) c;
+		i++;
 	}
 
 	return(b);
@@ -35,9 +35,9 @@ int main(){
 	i = 0;
 	while (i < 14)
 	{
-	    printf("Position %d: ASCII is %d\n", i, ime[i]);
-	    printf("Position %d: character is %c\n", i, ime[i]);
-	    i++;
+		printf("Position %d: ASCII is %d\n", i, ime[i]);
+		printf("Position %d: character is %c\n", i, ime[i]);
+		i++;
 	}
 	return(0);
 }
