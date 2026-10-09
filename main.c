@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marko <emarkomitrovic@gmail.com>           +#+  +:+       +#+        */
+/*   By: mmitrovi <mmitrovi@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/21 20:38:12 by marko             #+#    #+#             */
-/*   Updated: 2026/08/21 20:38:45 by marko            ###   ########.fr       */
+/*   Created: 2026/09/24 10:56:54 by mmitrovi          #+#    #+#             */
+/*   Updated: 2026/09/24 13:27:15 by mmitrovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,15 @@
 
 int	main(void)
 {
-	printf("%i", ft_strlen("Hello World"));
+	char	**result;
+	int		i;
+
+	result = ft_split("hello 42 madrid", ' ');
+	i = 0;
+	while (result[i])
+	{
+		printf("Reč %d: %s\n", i, result[i]);
+		i++;
+	}
+	return (0);
 }
