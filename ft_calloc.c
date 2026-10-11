@@ -6,7 +6,7 @@
 /*   By: mmitrovi <mmitrovi@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 10:51:59 by mmitrovi          #+#    #+#             */
-/*   Updated: 2026/09/24 14:05:28 by mmitrovi         ###   ########.fr       */
+/*   Updated: 2026/10/11 14:01:35 by mmitrovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	totall_number_of_bytes;
 	void	*ptr;
 
+	if (size > ((size_t) - 1) / nmemb)
+		return (NULL);
 	totall_number_of_bytes = nmemb * size;
 	ptr = malloc(totall_number_of_bytes);
 	if (ptr == NULL)
